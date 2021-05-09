@@ -1,0 +1,8 @@
+<% @recipes.each do |recipe, index| %>
+  <li>
+    <% status = recipe.done? ? 'X' : ' ' %>
+    <%= "[#{status}] #{recipe.name} (#{recipe.rating} / 5) (prep_time: #{recipe.prep_time})" %>
+  </li>
+<% end %>
+<br>
+<a href='/add'>ADD new</a>
